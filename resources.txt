@@ -1,0 +1,8 @@
+Resources
+
+func getRandomVal
+http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascript-in-a-specific-range
+
+random y val
+http://stackoverflow.com/questions/4550505/getting-random-value-from-an-array
+
