@@ -6,3 +6,11 @@ http://stackoverflow.com/questions/1527803/generating-random-numbers-in-javascri
 random y val
 http://stackoverflow.com/questions/4550505/getting-random-value-from-an-array
 
+http://css-tricks.com/snippets/javascript/javascript-keycodes/
+
+http://jlongster.com/Making-Sprite-based-Games-with-Canvas
+
+object oriented javascript basics, practice, and better understanding
+http://www.codecademy.com/en/tracks/javascript
+* full javascript intro course
+
