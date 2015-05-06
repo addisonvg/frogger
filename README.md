@@ -1,7 +1,15 @@
 frontend-nanodegree-arcade-game
 ===============================
 
+This game was built with Object oriented javascript, bsaed on the classic arcade game "Frogger" <br>
+app.js creates the enemies and games play <br>
+engine.js is the game engine and draws the game canvas <br>
+resources.js is the image loading utiity <br>
+
+
+
 PLAYING INSTRUCTIONS:  <br>
+----------------------------------------------- <br>
 -visit: http://addisonvg.github.io/frogger/ <br>
 -the play field is made of three sections:  <br>
   "grass" the saftey area, where your player will start  <br>
