@@ -1,4 +1,5 @@
-frontend-nanodegree-arcade-game
+Udacity Front End Web Developer Nano-Degree<br>
+Project 4: Object Oriented Javascript Arcade Game
 ===============================
 
 This game was built with Object oriented javascript, based on the classic arcade game "Frogger" <br>
