@@ -7,7 +7,7 @@ var Enemy = function() {
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
     this.init();
-}
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -19,18 +19,18 @@ Enemy.prototype.update = function(dt) {
     if (this.x > 505) {
         this.init();
     }
-}
+};
 
 // ititiate Enemy and assign coordinate + speed range
 Enemy.prototype.init = function(){
     this.x = getRandomVal(-350, -50);
     this.y = enemyY[Math.floor(Math.random() * enemyY.length)];
-    this.speed = getRandomVal(100, 250)
+    this.speed = getRandomVal(100, 250);
     if (this.wins == 5) {
                 this.speed = getRandomVal(250, 450);
                 alert ("Y ou are good at this, lets make things harder!");
-            };
-}
+            }
+};
 
 // Assign y cordinanates to hold Enemies in Rows
 var enemyY = [55, 140, 225, 310];
@@ -44,22 +44,22 @@ function getRandomVal(min, max) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     
-}
+};
 
 // Calls on Enemy collison
 Enemy.prototype.onCollision = function(player){
     player.health -= 1;
     player.reset();
     this.reset();
-    alert ("Ouch that Hurt :( try again")
-}
+    alert ("Ouch that Hurt :( try again");
+};
 
 // Reset point for enemies on collison 
 Enemy.prototype.reset = function() {
     this.x = getRandomVal(-350, -50);
     this.y = enemyY[Math.floor(Math.random() * enemyY.length)];
-    this.speed = getRandomVal(100, 250)  
-}
+    this.speed = getRandomVal(100, 250);  
+};
 
 
 // TODO: figure out enemy sprite rotate upsidedown on win 
@@ -75,12 +75,12 @@ var Player = function(){
     this.wins = 0;
     this.health = 3;
     
-}
+};
 //
 Player.prototype.init = function(){
     this.x = 200;
     this.y = 400;
-}
+};
 
 //create score board
 Player.prototype.renderScore = function(){
@@ -89,7 +89,7 @@ Player.prototype.renderScore = function(){
    ctx.fillText("Enemies: " + E, 10, 40);
    ctx.fillText("Wins: " + this.wins, 300, 40 );
    ctx.fillText("health: " + this.health, 400, 40);
-}
+};
 
 //player movement
 Player.prototype.handleInput = function(direction){
@@ -107,36 +107,35 @@ Player.prototype.handleInput = function(direction){
         this.y = this.y - 82;
     if (direction == 'down' && this.y < 407)
         this.y = this.y + 82;
-}
+};
 
 // render Player
 Player.prototype.render = function(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     this.renderScore();
-}
+};
 
 Player.prototype.update = function(dt){
     this.checkCollisions(dt);
-}
+};
 
 // Create Player Reset point after collision
 Player.prototype.reset = function(){ 
     this.x = 200;
     this.y = 400;
     //alert notice on loses
-    if (this.health == 0 ) {
+    if (this.health === 0 ) {
         this.wins = 0;
         this.health = 3;
         alert ("Quit Buggin' you Lose!");
     }
-}
+};
 
 var E = 9;
 //Check Collisons, Enemy Collisions
 Player.prototype.checkCollisions = function(dt){
     for(var i in allEnemies) {
-        if( Math.abs(this.x - allEnemies[i].x) <= 30
-         && Math.abs(this.y - allEnemies[i].y) <= 30){
+        if( Math.abs(this.x - allEnemies[i].x) <= 30 && Math.abs(this.y - allEnemies[i].y) <= 30){
             allEnemies[i].onCollision(this);          
         }
         
@@ -150,14 +149,14 @@ Player.prototype.checkCollisions = function(dt){
             if (this.wins >= 3) {
                 E += 2;
                 enemyIncrease();
-                };
+                }
             if (this.wins == 3) {
                 alert ("You are good at this, lets make things harder!");
 
-            };           
+            }          
         }
     }
-}
+};
 
 
 // Now instantiate your objects.
@@ -173,14 +172,14 @@ var enemyLoop = function (){
      if (this.y <= 20) break;
     
     }
-}
+};
 enemyLoop();
 
 var enemyIncrease = function (){
     for(var i= 0; i < 2; i++){
         allEnemies.push(new Enemy());
     }
-}
+};
 
 var player = new Player();
 
