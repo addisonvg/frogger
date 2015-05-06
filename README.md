@@ -1,6 +1,18 @@
 frontend-nanodegree-arcade-game
 ===============================
 
-Students should use this rubric: https://www.udacity.com/course/viewer#!/c-ud015/l-3072058665/m-3072588797
+PLAYING INSTRUCTIONS:
+-visit: http://addisonvg.github.io/frogger/
+-the play field is made of three sections:
+  "grass" the saftey area, where your player will start
+  "stone" enemies will cross this area. 
+  "water" reaching water equals one win
 
-for self-checking their submission.
+-to play, user the arrow keys to navigate the player accross the field
+-the goal is reach the water
+-reaching the water = 1 win
+-you player has 3 lives, if you come in contact with a an enemy (bug) you loose 1 life and are returned to the starting point.
+-if you loose all 3 lives you loose the game
+-"spacebar" will return your player to the starting point with no negative impact.
+-the game starts with 9 enemies in circulation, after 3 wins, 2 additional enemies are added for each win.
+-10 wins = you win the whole game.
